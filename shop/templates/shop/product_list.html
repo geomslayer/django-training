@@ -1,0 +1,29 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+{% for product in products %}
+<!--First column-->
+<div class="col-lg-6">
+    <!--Card-->
+    <div class="card">
+
+        <!--Card image-->
+        <div class="view overlay hm-white-slight">
+            <img src="{{ product.image.url }}"
+                 class="img-fluid" alt="">
+        </div>
+        <!--/.Card image-->
+
+        <!--Card content-->
+        <div class="card-block">
+            <h4 class="card-title">{{ product.name }}</h4>
+            <h5 class="card-price"><strong>{{ product.price }}</strong></h5>
+            <p class="card-text">{{ product.description|linebreaksbr }}</p>
+        </div>
+        <!--/.Card content-->
+
+    </div>
+    <!--/.Card-->
+</div>
+{% endfor %}
+{% endblock %}

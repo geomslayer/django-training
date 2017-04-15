@@ -1,0 +1,55 @@
+/* YOUR CUSTOM STYLES */
+
+main {
+    margin-top: 3rem;
+}
+
+main .card {
+    margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .read-more {
+        text-align: center;
+
+    }
+}
+
+.navbar {
+    background-color: #dfe9f0;
+    font-weight: 400;
+}
+
+/*
+        nav-item a {
+        color: black;
+     }   
+*/
+
+footer.page-footer a {
+    color: #323232;
+}
+
+footer.page-footer {
+    background-color: #dfe9f0;
+    margin-top: 2rem;
+    color: black;
+}
+
+.card-price {
+    color: #6043bf;
+}
+
+/*
+.navbar.navbar-dark .navbar-brand, .navbar.navbar-dark .navbar-brand:hover {
+    color: #4c4c4c;
+}
+
+.navbar.navbar-dark .breadcrumb a, .navbar.navbar-dark .navbar-nav .nav-item a {
+    color: #4c4c4c;
+}
+
+.navbar.navbar-dark .breadcrumb a, .navbar.navbar-dark .navbar-nav .nav-item a:hover {
+    color: #4c4c4c;
+}
+*/
