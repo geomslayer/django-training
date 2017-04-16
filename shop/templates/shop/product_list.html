@@ -2,28 +2,21 @@
 
 {% block content %}
 {% for product in products %}
-<!--First column-->
-<div class="col-lg-6">
-    <!--Card-->
-    <div class="card">
-
-        <!--Card image-->
-        <div class="view overlay hm-white-slight">
-            <img src="{{ product.image.url }}"
-                 class="img-fluid" alt="">
-        </div>
-        <!--/.Card image-->
-
-        <!--Card content-->
-        <div class="card-block">
-            <h4 class="card-title">{{ product.name }}</h4>
-            <h5 class="card-price"><strong>{{ product.price }}</strong></h5>
-            <p class="card-text">{{ product.description|linebreaksbr }}</p>
-        </div>
-        <!--/.Card content-->
-
+<div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+    <div class="mdl-card__media">
+        <img class="article-image" src="{{ product.image.url }}" border="0" alt="">
     </div>
-    <!--/.Card-->
+    <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">{{ product.name }}</h2>
+    </div>
+    <div class="description mdl-card__supporting-text">
+        {{ product.description|linebreaksbr }}
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+        <a class="price mdl-typography--button">
+            {{ product.price }}
+        </a>
+    </div>
 </div>
 {% endfor %}
 {% endblock %}
