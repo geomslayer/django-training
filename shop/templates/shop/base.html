@@ -42,8 +42,10 @@
         </div>
         <div class="mdl-layout__header-row portfolio-navigation-row">
             <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                <a class="mdl-navigation__link is-active" href="">Продукты</a>
-                <a class="mdl-navigation__link" href="">Контакты</a>
+                <a class="mdl-navigation__link {% if request.resolver_match.url_name == 'products' %}is-active{% endif %}"
+                   href="{% url 'products' %}">Продукты</a>
+                <a class="mdl-navigation__link {% if request.resolver_match.url_name == 'contacts' %}is-active{% endif %}"
+                   href="{% url 'contacts' %}">Контакты</a>
             </nav>
         </div>
     </header>
