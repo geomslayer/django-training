@@ -110,11 +110,16 @@ img.article-image {
     margin: auto;
 }
 
-.mdl-card__actions {
+.product-card-action {
     padding: 16px;
     text-align: center;
 }
 
 .description {
     font-size: 14px;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
 }

@@ -1,5 +1,48 @@
 {% extends 'shop/base.html' %}
 
 {% block content %}
-<h4>At the moment there is nothing here :)</h4>
+
+{% load static %}
+
+<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+
+    <div class="mdl-card__actions mdl-grid portfolio-copy">
+
+        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">О нас</h3>
+        <div class="mdl-cell mdl-cell--10-col mdl-card__supporting-text no-padding">
+            <p>
+                Наше поместье находится в деревне Севрюкаево, добро пожаловать!
+                <br>
+                Для покупки продуктов вы можете приехать либо прямиком в деревню,
+                либо в Тольятти по адресу <a>ул. Юбилейная, д. 73, кв. 32</a>
+                по будням с 10:00 до 10:01. Удачи!
+            </p>
+        </div>
+
+    </div>
+
+    <div class="mdl-card__media">
+        <div id="map"></div>
+    </div>
+
+    <div class="mdl-card__actions  mdl-grid portfolio-copy">
+
+        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Как связаться</h3>
+        <div class="mdl-cell mdl-cell--10-col mdl-card__supporting-text no-padding ">
+            <p>
+                Вы можете связаться с нами по телефону <a>8 800 555-35-35</a>
+                <br>
+                Или по почте <a href="mailto:nikitin@cs.msu.su">nikitin@cs.msu.su</a>
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{% static 'js/google_map.js' %}"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzSRO97AMOibb4JuI74kMftrhBQpedzq4&callback=initMap">
+</script>
+
 {% endblock %}
