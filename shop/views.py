@@ -3,7 +3,7 @@ from .models import Product
 
 
 def products_page(request):
-    products = Product.objects.all()
+    products = Product.objects.order_by('order', 'name').all()
     return render(request, 'shop/product_list.html', {'products': products})
 
 

@@ -6,6 +6,7 @@ class Product(models.Model):
     price = models.CharField(max_length=300, verbose_name='Описание цены', null=False)
     description = models.TextField(verbose_name='Описание товара', null=False)
     image = models.ImageField(upload_to='products/', verbose_name='Сопровождающее фото', null=False)
+    order = models.IntegerField(verbose_name='Порядковый номер')
 
     def __str__(self):
         return self.name
